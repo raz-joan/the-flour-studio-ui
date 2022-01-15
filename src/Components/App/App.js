@@ -11,8 +11,8 @@ const App = () => {
         <div className='body-container'>
             <Header />
             <main>
-                {/* <Welcome />
-                <GrainCardsContainer /> */}
+                <Welcome />
+                <GrainCardsContainer />
                 <SpecificGrainContainer />
             </main>
             {/* <Footer /> */}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './GrainsContainer.scss'
+import './GrainCardsContainer.scss'
 import GrainCard from '../GrainCard/GrainCard'
 
 const GrainsContainer = () => {

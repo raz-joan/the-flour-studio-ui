@@ -13,7 +13,7 @@ header {
 .title-icon-container {
     @include flex(center, center);
     height: 20vh;
-    width: 50%;
+    width: 60%;
 }
 
 .header-title {
@@ -29,11 +29,12 @@ header {
 nav {
     @include flex(center, center);
     height: 20vh;
-    width: 50%;
+    width: 40%;
 }
 
 .nav-button {
     @include button();
+    font-family: $header-font;
     padding: 1% 3%;
     box-shadow: none;
 }

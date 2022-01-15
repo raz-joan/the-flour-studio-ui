@@ -1,0 +1,7 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+.specific-grain-container {
+    @include flex(space-around, center, column);
+    width: 100%;
+}

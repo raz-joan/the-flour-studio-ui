@@ -6,7 +6,7 @@ import Review from '../Review/Review'
 
 const SpecificGrainContainer = () => {
     return (
-        <div>
+        <div className='specific-grain-container'>
             <SpecificGrainInfo />
             <ReviewForm />
             <Review />

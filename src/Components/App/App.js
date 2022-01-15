@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import Welcome from '../Welcome/Welcome'
 import Footer from '../Footer/Footer'
 import GrainCardsContainer from '../GrainCardsContainer/GrainCardsContainer'
+import SpecificGrainContainer from '../SpecificGrainContainer/SpecificGrainContainer'
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <main>
                 <Welcome />
                 <GrainCardsContainer />
+                <SpecificGrainContainer />
             </main>
             {/* <Footer /> */}
         </div>

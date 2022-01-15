@@ -1,0 +1,52 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+.grain-info-container {
+    @include flex(space-evenly, center);
+    height: 78vh;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.grain-info-title-image-container {
+    @include flex(space-around, center, column);
+}
+
+.grain-info-title {
+    font-family: $header-font;
+    font-size: 30px;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.grain-info-img {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    box-shadow: $shadow;
+    margin: 5% auto;
+}
+
+.grain-info-scroll {
+    font-family: $body-font;
+    font-size: 12px;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.grain-info-card {
+    @include flex(space-evenly, center, column);
+    background-color: $white;
+    box-shadow: $shadow;
+    padding: 2%;
+    height: 80%;
+    width: 50%;
+}
+
+.grain-info-detail {
+    font-family: $body-font;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    width: 75%;
+}

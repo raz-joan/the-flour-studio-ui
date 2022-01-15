@@ -8,7 +8,7 @@ const SpecificGrainInfo = () => {
             <div classname='grain-info-title-image-container'>
                 <h2 className='grain-info-title'>GRAIN NAME</h2>
                 <img src={wheat} alt='image of an brass bowl holding both grain and flour' className='grain-info-img' />
-                <p className='grain-info-scroll'>Scroll to leave a review and/or read reviews.</p>
+                <p className='grain-info-scroll'>Scroll to leave a review and/or to read reviews.</p>
             </div>
             <article className='grain-info-card'>
                 <p className='grain-info-detail'>Classification: " "</p>

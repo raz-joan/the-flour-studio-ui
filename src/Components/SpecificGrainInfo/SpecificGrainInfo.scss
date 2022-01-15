@@ -38,6 +38,7 @@
     @include flex(space-evenly, center, column);
     background-color: $white;
     box-shadow: $shadow;
+    box-sizing: border-box;
     padding: 2%;
     height: 80%;
     width: 50%;

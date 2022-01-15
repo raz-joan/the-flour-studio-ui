@@ -1,0 +1,26 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+.grain-card {
+    @include flex(space-evenly, center, column);
+    box-shadow: $shadow;
+    height: 240px;
+    width: 180px;
+}
+
+.color-circle {
+    background-color: $brown;
+    border-radius: 150px;
+    height: 25px;
+    width: 25px;
+}
+
+.grain-card-title {
+    font-family: $header-font;
+    font-size: 18px;
+}
+
+.grain-card-info {
+    font-family: $body-font;
+    font-size: 14px;
+}

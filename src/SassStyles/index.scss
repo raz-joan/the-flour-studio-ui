@@ -1,9 +1,11 @@
-@use '_variables' as *;
+@import '_variables.scss';
 @import '_normalize.scss';
 
 body {
-    background-color: #FAFAFA;
-    font-family: $header-font;
+    background-color: $off-white;
+    color: $black;
+    height: 100vh;
+    width: 100%;
 }
 
 // body {

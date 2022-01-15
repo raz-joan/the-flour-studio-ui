@@ -1,0 +1,25 @@
+@import '_variables.scss';
+
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin button() {
+  background-color: $off-white;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0.25px 2px 4px 0.5px $black;
+  font-family: $body-font;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2% 6%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $black;
+    color: $off-white;
+  }
+}

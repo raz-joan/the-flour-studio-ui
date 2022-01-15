@@ -1,0 +1,87 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+.welcome-container {
+    @include flex(center, center, column);
+    height: 160vh;
+    width: 100%;
+}
+
+.scroll-picture-section {
+    background-color: $dark-green;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.corn-image {
+    box-shadow: $shadow;
+    height: 495px;
+    width: 360px;
+}
+
+.mill-description-section {
+    @include flex(space-evenly, center);
+    height: 80vh;
+    width: 100%;
+}
+
+.description-article {
+    @include flex(space-evenly, center, column);
+    background-color: $white;
+    box-shadow: $shadow;
+    height: 50vh;
+    width: 30%;
+}
+
+.mill-description {
+    font-family: $body-font;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    width: 75%;
+}
+
+.view-grains-button {
+    @include button();
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    position: relative;
+    height: 65vh;
+    width: 50%;
+}
+
+.miller-image {
+    box-shadow: $shadow;
+    height: 522px;
+    width: 352px;
+    grid-column: 1 / span 8;
+    grid-row: 1;
+    z-index: 1;
+}
+
+.scoop-of-grain-image {
+    box-shadow: $shadow;
+    height: 232px;
+    width: 352px;
+    grid-column: 8 / span 8;
+    grid-row: 1;
+    margin-top: 25%;
+    z-index: 2;
+}
+
+.red-block-image {
+    background-color: $red;
+    height: 500px;
+    width: 350px;
+    grid-column: 5 / span 8;
+    grid-row: 1;
+    margin-top: 15%;
+}

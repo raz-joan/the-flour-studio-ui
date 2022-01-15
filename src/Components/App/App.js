@@ -1,12 +1,17 @@
 import React from "react"
 import './App.scss'
+import Header from '../Header/Header'
+import Welcome from '../Welcome/Welcome'
+import Footer from '../Footer/Footer'
 
 const App = () => {
     return (
         <div className='body-container'>
-            <header><p>Header</p></header>
-            <main>Main</main>
-            <footer>Footer</footer>
+            <Header />
+            <main>
+                <Welcome/>
+            </main>
+            <Footer />
         </div>
         )
 }

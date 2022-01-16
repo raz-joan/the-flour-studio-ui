@@ -6,27 +6,34 @@ const ReviewForm = ({ grainName, postNewReview }) => {
     const [userName, setUserName] = useState('')
     const [userRating, setUserRating] = useState('')
     const [userNote, setUserNote] = useState('')
+    const [inputError, setInputError] = useState(false)
 
     const todaysDate = new Date().toISOString().slice(0, 10).replaceAll("-", "/")
 
     const submitReview = (event) => {
         event.preventDefault()
-        const newReview = {
-            name: grainName,
-            customerName: userName,
-            date: todaysDate,
-            rating: userRating,
-            note: userNote
+        if (userName && userRating && userNote) {
+            const newReview = {
+                name: grainName,
+                customerName: userName,
+                date: todaysDate,
+                rating: userRating,
+                note: userNote
+            }
+            postNewReview(newReview)
+            clearInputs()
+        } else {
+            setInputError(true)
         }
-        console.log(newReview)
-        postNewReview(newReview)
-        clearInputs()
     }
 
     const clearInputs = () => {
         setUserName('')
         setUserRating('')
         setUserNote('')
+        if (inputError) {
+            setInputError(false)
+        }
     }
 
     return (
@@ -46,6 +53,7 @@ const ReviewForm = ({ grainName, postNewReview }) => {
             </div>
             <div className='review-button-container'>
                 <button className='review-form-button' onClick={(event) => submitReview(event) }>Submit my Review!</button>
+                { inputError && <p className='input-error-message'>All three questions require an answer to submit a review.</p>}
             </div>
         </form>
     )

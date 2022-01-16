@@ -4,12 +4,12 @@ import SpecificGrainInfo from '../SpecificGrainInfo/SpecificGrainInfo'
 import ReviewForm from '../ReviewForm/ReviewForm'
 import ReviewContainer from '../ReviewContainer/ReviewContainer'
 
-const SpecificGrainContainer = () => {
+const SpecificGrainContainer = ({ grains, reviews }) => {
     return (
         <div className='specific-grain-container'>
-            <SpecificGrainInfo />
+            <SpecificGrainInfo grains={ grains }/>
             <ReviewForm />
-            <ReviewContainer />
+            <ReviewContainer reviews={ reviews }/>
         </div>
     )
 }

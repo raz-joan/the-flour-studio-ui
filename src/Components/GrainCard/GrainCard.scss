@@ -4,8 +4,8 @@
 .grain-card {
     @include flex(space-evenly, center, column);
     box-shadow: $shadow;
-    height: 240px;
-    width: 180px;
+    height: 320px;
+    width: 245px;
 }
 
 .color-circle {
@@ -23,4 +23,14 @@
 .grain-card-info {
     font-family: $body-font;
     font-size: 14px;
+}
+
+.green {
+    font-weight: bold;
+    color: $dark-green;
+}
+
+.red {
+    font-weight: bold;
+    color: $red;
 }

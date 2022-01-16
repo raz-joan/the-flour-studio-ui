@@ -32,7 +32,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={ <Welcome /> }/>
                     <Route path='/grains' element={ <GrainCardsContainer grains={grains} /> }/>
-                    <Route path='/grains/:id' element={ <SpecificGrainContainer grains={grains} reviews={reviews} /> } />
+                    <Route path='/grains/:id' element={ <SpecificGrainContainer reviews={reviews} /> } />
                 </Routes>
             </main>
             {/* <Footer /> */}

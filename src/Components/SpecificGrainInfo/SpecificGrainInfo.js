@@ -1,10 +1,12 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import './SpecificGrainInfo.scss'
 import wheat from '../../Assets/wheat.png'
 
 const SpecificGrainInfo = ({ grains }) => {
 
-    const grain = grains[0]
+    const { id } = useParams()
+    const grain = grains.find(grain => grain.id === id)
 
     return (
         <section className='grain-info-container'>

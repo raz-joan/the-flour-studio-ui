@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import './App.scss'
+import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import Welcome from '../Welcome/Welcome'
 import Footer from '../Footer/Footer'
@@ -28,9 +29,11 @@ const App = () => {
         <div className='body-container'>
             <Header />
             <main>
-                <Welcome />
-                {/* <GrainCardsContainer grains={ grains }/> */}
-                {/* <SpecificGrainContainer grains={ grains } reviews={ reviews }/> */}
+                <Routes>
+                    <Route path='/' element={ <Welcome /> }/>
+                    <Route path='/grains' element={ <GrainCardsContainer grains={grains} /> }/>
+                    <Route path='/grains/:id' element={ <SpecificGrainContainer grains={grains} reviews={reviews} /> } />
+                </Routes>
             </main>
             {/* <Footer /> */}
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Welcome.scss'
 import eightyFiveMill from '../../Assets/eightyFiveMill.png'
 import redHandleScoop from '../../Assets/redHandleScoop.png'
@@ -12,18 +13,20 @@ const Welcome = () => {
     return (
         <div className='welcome-container'>
             <section className='scroll-picture-section'>
-                <img className='corn-image' src={oaxacanWhole} alt='picture of whole kernel green corn'/>
-                <img className='corn-image' src={woodenMill} alt='picture of a wooden stone mill with corn flour pouring out of its spout'/>
-                <img className='corn-image' src={oaxacanGround} alt='picture of ground green corn flour'/>
+                <img className='corn-image' src={ oaxacanWhole } alt='picture of whole kernel green corn'/>
+                <img className='corn-image' src={ woodenMill } alt='picture of a wooden stone mill with corn flour pouring out of its spout'/>
+                <img className='corn-image' src={ oaxacanGround } alt='picture of ground green corn flour'/>
             </section>
             <section className='mill-description-section'>
                 <article className='description-article'>
-                    <p className='mill-description'>{millDescription}</p>
-                    <button className='view-grains-button'>View our Grains!</button>
+                    <p className='mill-description'>{ millDescription }</p>
+                    <Link to='/grains'>
+                        <button className='view-grains-button'>View our Grains!</button>
+                    </Link>
                 </article>
                 <div className='image-container'>
-                    <img className='miller-image' src={eightyFiveMill} alt='picture of the miller loading the hopper of the stone mill with grain'/>
-                    <img className='scoop-of-grain-image' src={redHandleScoop} alt='picture of a scoop of wheat berries' />
+                    <img className='miller-image' src={ eightyFiveMill } alt='picture of the miller loading the hopper of the stone mill with grain'/>
+                    <img className='scoop-of-grain-image' src={ redHandleScoop } alt='picture of a scoop of wheat berries' />
                     <div className='red-block-image'></div>
                 </div>
             </section>

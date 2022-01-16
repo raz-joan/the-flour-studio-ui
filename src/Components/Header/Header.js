@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './Header.scss'
 import seed from '../../Assets/seed.png'
 
 const Header = () => {
+
+    const navigate = useNavigate()
+
     return (
         <header>
             <div className='title-icon-container'>
@@ -11,12 +14,8 @@ const Header = () => {
                 <img src={seed} alt='black and white image of a single grain seed' className='header-seed-icon'/>
             </div>
             <nav>
-                <Link to='/'>
-                    <button className='nav-button'>Home</button>
-                </Link>
-                <Link to='/grains'>
-                    <button className='nav-button'>Grains</button>
-                </Link>
+                <button className='nav-button' onClick={() => navigate('/')}>Home</button>
+                <button className='nav-button' onClick={() => navigate('/grains')}>Grains</button>
                 {/* <button className='nav-button'>About</button> */}
             </nav>
         </header>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import './App.scss'
+import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import Welcome from '../Welcome/Welcome'
 import Footer from '../Footer/Footer'
@@ -8,8 +9,7 @@ import SpecificGrainContainer from '../SpecificGrainContainer/SpecificGrainConta
 
 const App = () => {
 
-    const [ grains, setGrains ] = useState([])
-    const [ reviews, setReviews ] = useState([])
+    const [grains, setGrains] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3000/api/v1/grains')
@@ -17,20 +17,17 @@ const App = () => {
             .then(data => {
                 setGrains(data)
             })
-        fetch('http://localhost:3000/api/v1/reviews')
-            .then(res => res.json())
-            .then(data => {
-                setReviews(data)
-            })
     }, [])
 
     return (
         <div className='body-container'>
             <Header />
             <main>
-                <Welcome />
-                {/* <GrainCardsContainer grains={ grains }/> */}
-                {/* <SpecificGrainContainer grains={ grains } reviews={ reviews }/> */}
+                <Routes>
+                    <Route path='/' element={ <Welcome /> }/>
+                    <Route path='/grains' element={<GrainCardsContainer grains={grains} />} />
+                    <Route path='/grains/:id' element={<SpecificGrainContainer />} />
+                </Routes>
             </main>
             {/* <Footer /> */}
         </div>

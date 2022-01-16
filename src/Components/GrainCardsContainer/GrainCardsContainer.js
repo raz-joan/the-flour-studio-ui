@@ -4,7 +4,7 @@ import GrainCard from '../GrainCard/GrainCard'
 
 const GrainsContainer = ({ grains }) => {
     
-    const grainCards = grains.map(grain => <GrainCard grain={ grain }/>)
+    const grainCards = grains.map(grain => <GrainCard grain={grain} key={ grain.id }/> )
 
     return (
         <div className='container-view'>

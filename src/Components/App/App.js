@@ -9,19 +9,13 @@ import SpecificGrainContainer from '../SpecificGrainContainer/SpecificGrainConta
 
 const App = () => {
 
-    const [ grains, setGrains ] = useState([])
-    const [ reviews, setReviews ] = useState([])
+    const [grains, setGrains] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3000/api/v1/grains')
             .then(res => res.json())
             .then(data => {
                 setGrains(data)
-            })
-        fetch('http://localhost:3000/api/v1/reviews')
-            .then(res => res.json())
-            .then(data => {
-                setReviews(data)
             })
     }, [])
 
@@ -31,8 +25,8 @@ const App = () => {
             <main>
                 <Routes>
                     <Route path='/' element={ <Welcome /> }/>
-                    <Route path='/grains' element={ <GrainCardsContainer grains={grains} /> }/>
-                    <Route path='/grains/:id' element={ <SpecificGrainContainer reviews={reviews} /> } />
+                    <Route path='/grains' element={<GrainCardsContainer grains={grains} />} />
+                    <Route path='/grains/:id' element={<SpecificGrainContainer />} />
                 </Routes>
             </main>
             {/* <Footer /> */}

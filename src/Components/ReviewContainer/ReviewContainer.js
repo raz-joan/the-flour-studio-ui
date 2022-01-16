@@ -4,7 +4,7 @@ import Review from '../Review/Review'
 
 const ReviewContainer = ({ reviews }) => {
     
-    const customerReviews = reviews.map(review => <Review review={ review }/>)
+    const customerReviews = reviews.map(review => <Review key={review.id} review={ review }/>)
 
     return (
         <section className='review-container'>

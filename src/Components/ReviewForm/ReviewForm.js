@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './ReviewForm.scss'
 
-const ReviewForm = ({ grainName }) => {
+const ReviewForm = ({ grainName, postNewReview }) => {
 
     const [userName, setUserName] = useState('')
-    const [userRating, setUserRating] = useState(0)
+    const [userRating, setUserRating] = useState('')
     const [userNote, setUserNote] = useState('')
 
     const todaysDate = new Date().toISOString().slice(0, 10).replaceAll("-", "/")
@@ -19,12 +19,13 @@ const ReviewForm = ({ grainName }) => {
             note: userNote
         }
         console.log(newReview)
+        postNewReview(newReview)
         clearInputs()
     }
 
     const clearInputs = () => {
         setUserName('')
-        setUserRating(0)
+        setUserRating('')
         setUserNote('')
     }
 

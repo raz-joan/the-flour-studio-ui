@@ -2,11 +2,9 @@ import React from 'react'
 import './GrainCardsContainer.scss'
 import GrainCard from '../GrainCard/GrainCard'
 
-const GrainsContainer = () => {
-    let grainCards = []
-    for (let i = 0; i < 20; i++) {
-        grainCards.push(<GrainCard />)
-    }
+const GrainsContainer = ({ grains }) => {
+    
+    const grainCards = grains.map(grain => <GrainCard grain={ grain }/>)
 
     return (
         <div className='container-view'>

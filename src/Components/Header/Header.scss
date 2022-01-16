@@ -1,0 +1,40 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+header {
+    @include flex(space-between, center);
+    background-color: $off-white;
+    height: 20vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.title-icon-container {
+    @include flex(center, center);
+    height: 20vh;
+    width: 60%;
+}
+
+.header-title {
+    font-family: $header-font;
+    font-size: 50px;
+}
+
+.header-seed-icon {
+    width: 50px;
+    margin: 0 15px;
+}
+
+nav {
+    @include flex(center, center);
+    height: 20vh;
+    width: 40%;
+}
+
+.nav-button {
+    @include button();
+    font-family: $header-font;
+    padding: 1% 3%;
+    box-shadow: none;
+}

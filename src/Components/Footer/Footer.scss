@@ -1,0 +1,8 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+footer {
+    @include flex(center, center);
+    position: sticky;
+    bottom: 0;
+}

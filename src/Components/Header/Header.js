@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Header.scss'
 import seed from '../../Assets/seed.png'
 
@@ -10,9 +11,13 @@ const Header = () => {
                 <img src={seed} alt='black and white image of a single grain seed' className='header-seed-icon'/>
             </div>
             <nav>
-                <button className='nav-button'>Home</button>
-                <button className='nav-button'>Grains</button>
-                <button className='nav-button'>About</button>
+                <Link to='/'>
+                    <button className='nav-button'>Home</button>
+                </Link>
+                <Link to='/grains'>
+                    <button className='nav-button'>Grains</button>
+                </Link>
+                {/* <button className='nav-button'>About</button> */}
             </nav>
         </header>
     )

@@ -11,6 +11,23 @@ const SpecificGrainContainer = () => {
     const [reviews, setReviews] = useState([])
     const [grain, setGrain] = useState({})
 
+    const postNewReview = (newReview) => {
+        fetch('http://localhost:3000/api/v1/reviews', {
+            method: "POST",
+            body: JSON.stringify(newReview),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .then(() => {
+                fetch('http://localhost:3000/api/v1/reviews')
+                    .then(res => res.json())
+                    .then(data => setReviews(data))
+            })
+    }
+
     useEffect(() => {
         fetch('http://localhost:3000/api/v1/reviews')
             .then(res => res.json())
@@ -27,7 +44,7 @@ const SpecificGrainContainer = () => {
     return (
         <div className='specific-grain-container'>
             <SpecificGrainInfo grain={ grain }/>
-            <ReviewForm grainName={ grain.name }/>
+            <ReviewForm grainName={ grain.name } postNewReview={ postNewReview }/>
             <ReviewContainer reviews={ reviews }/>
         </div>
     )

@@ -1,10 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './GrainCardsContainer.scss'
 import GrainCard from '../GrainCard/GrainCard'
 
 const GrainsContainer = ({ grains }) => {
     
-    const grainCards = grains.map(grain => <GrainCard grain={ grain }/>)
+    const grainCards = grains.map(grain => {
+        return (
+            <Link to={`/grains/${grain.id}`} key={ grain.id }>
+                <GrainCard grain={grain} />
+            </Link>
+        )
+    })
 
     return (
         <div className='container-view'>

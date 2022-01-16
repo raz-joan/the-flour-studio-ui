@@ -2,9 +2,14 @@ import React from 'react'
 import './ReviewContainer.scss'
 import Review from '../Review/Review'
 
-const ReviewContainer = ({ reviews }) => {
+const ReviewContainer = ({ reviews, grainName }) => {
     
-    const customerReviews = reviews.map(review => <Review review={ review }/>)
+    const customerReviews = reviews.reduce((matchedReviews, review) => {
+        if (grainName === review.name) {
+            matchedReviews.push(<Review key={review.id} review={review} />)
+        }
+        return matchedReviews
+    }, [])
 
     return (
         <section className='review-container'>

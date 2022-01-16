@@ -1,20 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React from 'react'
 import './SpecificGrainInfo.scss'
 import wheat from '../../Assets/wheat.png'
 
-const SpecificGrainInfo = () => {
-
-    const { id } = useParams()
-    const [ grain, setGrain ] = useState({})
-
-    useEffect(() => {
-        fetch(`http://localhost:3000/api/v1/grains/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                setGrain(data)
-            })
-    }, [])
+const SpecificGrainInfo = ({ grain }) => {
 
     return (
         <section className='grain-info-container'>

@@ -5,7 +5,7 @@ import wheat from '../../Assets/wheat.png'
 const SpecificGrainInfo = () => {
     return (
         <section className='grain-info-container'>
-            <div classname='grain-info-title-image-container'>
+            <div className='grain-info-title-image-container'>
                 <h2 className='grain-info-title'>GRAIN NAME</h2>
                 <img src={wheat} alt='image of an brass bowl holding both grain and flour' className='grain-info-img' />
                 <p className='grain-info-scroll'>Scroll to leave a review and/or to read reviews.</p>

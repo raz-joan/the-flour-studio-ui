@@ -27,7 +27,7 @@ const SpecificGrainContainer = () => {
     return (
         <div className='specific-grain-container'>
             <SpecificGrainInfo grain={ grain }/>
-            <ReviewForm />
+            <ReviewForm grainName={ grain.name }/>
             <ReviewContainer reviews={ reviews }/>
         </div>
     )

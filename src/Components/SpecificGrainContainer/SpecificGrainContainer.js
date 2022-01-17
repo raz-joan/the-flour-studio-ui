@@ -48,7 +48,7 @@ const SpecificGrainContainer = () => {
                 if (data.id) {
                     setGrain(data)
                 } else {
-                    setFetchError('Details are unavailable ... unable to connect to the server!')
+                    setFetchError('404: Looks like what you are looking for does not exist!')
                 }
             })
     }, [])

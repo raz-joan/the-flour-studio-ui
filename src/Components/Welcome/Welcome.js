@@ -16,7 +16,7 @@ const Welcome = () => {
         <div className='welcome-container'>
             <section className='scroll-picture-section'>
                 <img className='corn-image' src={ oaxacanWhole } alt='picture of whole kernel green corn'/>
-                <img className='corn-image' src={ woodenMill } alt='picture of a wooden stone mill with corn flour pouring out of its spout'/>
+                <img className='corn-image wooden-mill' src={ woodenMill } alt='picture of a wooden stone mill with corn flour pouring out of its spout'/>
                 <img className='corn-image' src={ oaxacanGround } alt='picture of ground green corn flour'/>
             </section>
             <section className='mill-description-section'>

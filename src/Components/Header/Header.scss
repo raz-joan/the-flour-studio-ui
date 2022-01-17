@@ -38,3 +38,51 @@ nav {
     padding: 1% 3%;
     box-shadow: none;
 }
+
+// ~~~~~ RESPONSIVE ~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~
+
+@media screen and (max-width: 600px) {
+
+    header {
+        @include flex(flex-start, center, column);
+    }
+
+    .title-icon-container {
+        height: 10vh;
+        width: 90%;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+
+    .header-seed-icon {
+        width: 30px;
+        margin: 0 5px;
+    }
+
+    nav {
+        height: 10vh;
+        width: 90%;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 910px) {
+
+    header {
+        @include flex(center, center, column);
+        height: 15vh;
+    }
+
+    .title-icon-container {
+        height: 10vh;
+        width: 90%;
+    }
+
+    nav {
+        height: 5vh;
+        width: 90%;
+    }
+}

@@ -3,6 +3,11 @@
 
 footer {
     @include flex(center, center);
-    position: sticky;
-    bottom: 0;
+    margin: 1% 0;
+}
+
+.icon-ref {
+    font-family: $body-font;
+    font-size: 10px;
+    color: $black;
 }

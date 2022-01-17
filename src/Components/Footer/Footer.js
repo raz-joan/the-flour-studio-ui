@@ -4,7 +4,7 @@ import './Footer.scss'
 const Footer = () => {
     return (
         <footer>
-            <p>This is the footer.</p>
+            <a className='icon-ref' href="https://www.flaticon.com/free-icons/seed" title="seed icons">Seed icon created by Freepik - Flaticon</a>
         </footer>
     )
 }

@@ -12,12 +12,24 @@ const SpecificGrainContainer = () => {
     const [reviews, setReviews] = useState([])
     const [grain, setGrain] = useState({})
     const [fetchError, setFetchError] = useState('')
+    const [reviewError, setReviewError] = useState('')
 
     const postNewReview = (newReview) => {
         apiCalls.postReview(newReview)
+            .then(data => {
+                if (!data.newReview) {
+                    setReviewError('Review was unable to post, please try again.')
+                }
+            })
             .then(() => {
                 apiCalls.getData('http://localhost:3000/api/v1/reviews')
-                    .then(data => setReviews(data))
+                    .then(data => {
+                        if (data[0]) {
+                            setReviews(data)
+                        } else {
+                            setReviewError('Reviews are unavailable ... unable to connect to the server!')
+                        }
+                    })
             })
     }
 
@@ -27,7 +39,7 @@ const SpecificGrainContainer = () => {
                 if (data[0]) {
                     setReviews(data)
                 } else {
-                    setFetchError('Oops ... unable to connect to the server!')
+                    setReviewError('Reviews are unavailable ... unable to connect to the server!')
                 }
             })
         
@@ -36,7 +48,7 @@ const SpecificGrainContainer = () => {
                 if (data.id) {
                     setGrain(data)
                 } else {
-                    setFetchError('Oops ... unable to connect to the server!')
+                    setFetchError('Details are unavailable ... unable to connect to the server!')
                 }
             })
     }, [])
@@ -47,7 +59,7 @@ const SpecificGrainContainer = () => {
             <div className='specific-grain-container'>
                 <SpecificGrainInfo grain={grain} />
                 <ReviewForm grainName={grain.name} postNewReview={postNewReview} />
-                <ReviewContainer grainName={grain.name} reviews={reviews} />
+                <ReviewContainer grainName={grain.name} reviews={reviews} reviewError={reviewError}/>
             </div>
             }
         </>

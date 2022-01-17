@@ -48,7 +48,8 @@ nav {
         @include flex(flex-start, center, column);
     }
 
-    .title-icon-container {
+    .title-icon-container,
+    nav {
         height: 10vh;
         width: 90%;
     }
@@ -60,11 +61,6 @@ nav {
     .header-seed-icon {
         width: 30px;
         margin: 0 5px;
-    }
-
-    nav {
-        height: 10vh;
-        width: 90%;
     }
 }
 

@@ -41,6 +41,7 @@
 }
 
 .green {
+    font-family: $body-font;
     background-color: $dark-green;
     border-radius: 150px;
     color: $white;
@@ -49,6 +50,7 @@
 }
 
 .red {
+    font-family: $body-font;
     font-weight: bold;
     color: $red;
 }

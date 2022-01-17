@@ -60,7 +60,7 @@
 // ~~~~~ RESPONSIVE ~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 810px) {
 
     .grain-info-container {
         @include flex(center, center, column);
@@ -71,4 +71,5 @@
         width: 90%;
         margin: 5% 0;
     }
+    
 }

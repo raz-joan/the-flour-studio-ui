@@ -57,9 +57,9 @@ const SpecificGrainContainer = () => {
         <>
             { fetchError ? <p className = 'fetch-error-message'>{ fetchError }</p> :
             <div className='specific-grain-container'>
-                <SpecificGrainInfo grain={grain} />
-                <ReviewForm grainName={grain.name} postNewReview={postNewReview} />
-                <ReviewContainer grainName={grain.name} reviews={reviews} reviewError={reviewError}/>
+                <SpecificGrainInfo grain={ grain } />
+                <ReviewForm grainName={ grain.name } postNewReview={ postNewReview } />
+                <ReviewContainer grainName={ grain.name } reviews={ reviews } reviewError={ reviewError }/>
             </div>
             }
         </>

@@ -56,3 +56,19 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+// ~~~~~ RESPONSIVE ~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~
+
+@media screen and (max-width: 420px) {
+
+    .grain-info-container {
+        @include flex(center, center, column);
+        height: 100%;
+    }
+
+    .grain-info-card {
+        width: 90%;
+        margin: 5% 0;
+    }
+}

@@ -91,3 +91,56 @@
     grid-column: 4 / span 9;
     grid-row: 1;
 }
+
+// ~~~~~ RESPONSIVE ~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~
+
+@media screen and (max-width: 420px) {
+
+    .welcome-container {
+        height: 100%;
+    }
+
+    .scroll-picture-section {
+        height: 60%;
+        padding: 2% 0;
+    }
+
+    .mill-description-section {
+        @include flex(center, center, column);
+        height: 80vh;
+    }
+
+    .description-article {
+        height: 60%;
+        width: 90%;
+        margin-top: 2%;
+        padding: 2% 0;
+    }
+
+    .mill-description {
+        font-size: 14px;
+        line-height: 24px;
+        width: 80%;
+    }
+
+    .image-container {
+        @include flex(center, center);
+        height: 40%;
+        width: 100%;
+        padding: 2% 0;
+    }
+
+    .miller-image {
+        display: none;
+    }
+
+    .scoop-of-grain-image {
+        margin-top: 0%;
+        z-index: 0;
+    }
+
+    .red-block-image {
+        display: none;
+    }
+}

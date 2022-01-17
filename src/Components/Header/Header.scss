@@ -42,7 +42,7 @@ nav {
 // ~~~~~ RESPONSIVE ~~~~~
 // ~~~~~~~~~~~~~~~~~~~~~~
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
 
     header {
         @include flex(flex-start, center, column);
@@ -69,7 +69,7 @@ nav {
 }
 
 
-@media screen and (min-width: 420px) and (max-width: 910px) {
+@media screen and (min-width: 600px) and (max-width: 910px) {
 
     header {
         @include flex(center, center, column);

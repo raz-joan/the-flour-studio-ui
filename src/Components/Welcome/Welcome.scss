@@ -150,3 +150,69 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 420px) and (max-width: 810px) {
+
+    .welcome-container {
+        height: 100%;
+    }
+
+    .scroll-picture-section {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        height: 100%;
+        padding: 2% 0;
+    }
+
+    .corn-image {
+        height: 445px;
+        width: 324px;
+    }
+
+    .wooden-mill {
+        display: none;
+    }
+
+    .mill-description-section {
+        @include flex(center, center, column);
+        height: 100%;
+    }
+
+    .description-article {
+        height: 60%;
+        width: 90%;
+        margin-top: 2%;
+        padding: 2% 0;
+    }
+
+    .mill-description {
+        font-size: 14px;
+        line-height: 24px;
+        width: 80%;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(17, 1fr);
+        height: 40%;
+        width: 100%;
+        padding: 2% 0;
+    }
+
+    .miller-image {
+        grid-column: 3 / span 8;
+        height: 524px;
+        width: 334px;
+        margin-top: 0;
+    }
+
+    .scoop-of-grain-image {
+        grid-column: 9 / span 8;
+        height: 220px;
+        width: 334px;
+    }
+
+    .red-block-image {
+        grid-column: 4 / span 11;
+        height: 80%;
+        margin-top: 10%;
+    }
+}

@@ -67,3 +67,22 @@ nav {
         width: 90%;
     }
 }
+
+
+@media screen and (min-width: 420px) and (max-width: 810px) {
+
+    header {
+        @include flex(center, center, column);
+        height: 15vh;
+    }
+
+    .title-icon-container {
+        height: 10vh;
+        width: 90%;
+    }
+
+    nav {
+        height: 5vh;
+        width: 90%;
+    }
+}

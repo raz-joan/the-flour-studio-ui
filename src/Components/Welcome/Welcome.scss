@@ -102,13 +102,19 @@
     }
 
     .scroll-picture-section {
-        height: 60%;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        height: 100%;
         padding: 2% 0;
+    }
+
+    .corn-image {
+        height: 445px;
+        width: 324px;
     }
 
     .mill-description-section {
         @include flex(center, center, column);
-        height: 80vh;
+        height: 100%;
     }
 
     .description-article {

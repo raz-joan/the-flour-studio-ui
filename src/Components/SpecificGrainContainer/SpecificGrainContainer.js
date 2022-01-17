@@ -11,22 +11,9 @@ const SpecificGrainContainer = () => {
     const { id } = useParams()
     const [reviews, setReviews] = useState([])
     const [grain, setGrain] = useState({})
+    const [fetchError, setFetchError] = useState('')
 
     const postNewReview = (newReview) => {
-        // fetch('http://localhost:3000/api/v1/reviews', {
-        //     method: "POST",
-        //     body: JSON.stringify(newReview),
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     }
-        // })
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
-        //     .then(() => {
-        //         fetch('http://localhost:3000/api/v1/reviews')
-        //             .then(res => res.json())
-        //             .then(data => setReviews(data))
-        //     })
         apiCalls.postReview(newReview)
             .then(() => {
                 apiCalls.getData('http://localhost:3000/api/v1/reviews')
@@ -35,22 +22,35 @@ const SpecificGrainContainer = () => {
     }
 
     useEffect(() => {
-        // fetch('http://localhost:3000/api/v1/reviews')
-        //     .then(res => res.json())
         apiCalls.getData('http://localhost:3000/api/v1/reviews')
-            .then(data => setReviews(data))
-        // fetch(`http://localhost:3000/api/v1/grains/${id}`)
-        //     .then(res => res.json())
+            .then(data => {
+                if (data[0]) {
+                    setReviews(data)
+                } else {
+                    setFetchError('Oops ... unable to connect to the server!')
+                }
+            })
+        
         apiCalls.getData(`http://localhost:3000/api/v1/grains/${id}`)
-            .then(data => setGrain(data))
+            .then(data => {
+                if (data.id) {
+                    setGrain(data)
+                } else {
+                    setFetchError('Oops ... unable to connect to the server!')
+                }
+            })
     }, [])
 
     return (
-        <div className='specific-grain-container'>
-            <SpecificGrainInfo grain={ grain }/>
-            <ReviewForm grainName={ grain.name } postNewReview={ postNewReview }/>
-            <ReviewContainer grainName={ grain.name } reviews={ reviews }/>
-        </div>
+        <>
+            { fetchError ? <p className = 'fetch-error-message'>{ fetchError }</p> :
+            <div className='specific-grain-container'>
+                <SpecificGrainInfo grain={grain} />
+                <ReviewForm grainName={grain.name} postNewReview={postNewReview} />
+                <ReviewContainer grainName={grain.name} reviews={reviews} />
+            </div>
+            }
+        </>
     )
 }
 

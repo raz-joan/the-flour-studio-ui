@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './GrainCardsContainer.scss'
 import GrainCard from '../GrainCard/GrainCard'
 
@@ -26,3 +27,7 @@ const GrainsContainer = ({ grains }) => {
 }
 
 export default GrainsContainer
+
+GrainsContainer.propTypes = {
+    grains: PropTypes.array.isRequired
+}

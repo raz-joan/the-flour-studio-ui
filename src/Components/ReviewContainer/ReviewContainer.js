@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './ReviewContainer.scss'
 import Review from '../Review/Review'
 
@@ -25,3 +26,9 @@ const ReviewContainer = ({ reviews, grainName, reviewError }) => {
 }
 
 export default ReviewContainer
+
+ReviewContainer.propTypes = {
+    reviews: PropTypes.array.isRequired,
+    grainName: PropTypes.string.isRequired,
+    reviewError: PropTypes.string.isRequired
+}

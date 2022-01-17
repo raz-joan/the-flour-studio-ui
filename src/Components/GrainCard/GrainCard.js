@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom'
 import './GrainCard.scss'
 
@@ -20,3 +21,7 @@ const GrainCard = ({ grain }) => {
 }
 
 export default GrainCard
+
+GrainCard.propTypes = {
+    grain: PropTypes.object.isRequired
+}

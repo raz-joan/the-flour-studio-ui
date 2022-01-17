@@ -30,3 +30,14 @@
     text-align: center;
     width: 100%;
 }
+
+.review-error-message {
+    font-family: $body-font;
+    font-size: 20px;
+    color: $white;
+    text-align: center;
+    background-color: $red;
+    border-radius: 150px;
+    padding: 1% 0;
+    width: 100%;
+}

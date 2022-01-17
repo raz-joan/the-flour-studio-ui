@@ -29,6 +29,6 @@ export default ReviewContainer
 
 ReviewContainer.propTypes = {
     reviews: PropTypes.array.isRequired,
-    grainName: PropTypes.string,
+    grainName: PropTypes.string.isRequired,
     reviewError: PropTypes.string.isRequired
 }

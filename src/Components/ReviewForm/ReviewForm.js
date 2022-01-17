@@ -63,6 +63,6 @@ const ReviewForm = ({ grainName, postNewReview }) => {
 export default ReviewForm
 
 ReviewForm.propTypes = {
-    grainName: PropTypes.string,
+    grainName: PropTypes.string.isRequired,
     postNewReview: PropTypes.func.isRequired   
 }

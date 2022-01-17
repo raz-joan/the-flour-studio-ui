@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './ReviewForm.scss'
 
 const ReviewForm = ({ grainName, postNewReview }) => {
@@ -60,3 +61,8 @@ const ReviewForm = ({ grainName, postNewReview }) => {
 }
 
 export default ReviewForm
+
+ReviewForm.propTypes = {
+    grainName: PropTypes.string,
+    postNewReview: PropTypes.func.isRequired   
+}

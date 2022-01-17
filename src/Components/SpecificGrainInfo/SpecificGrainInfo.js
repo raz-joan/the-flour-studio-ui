@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './SpecificGrainInfo.scss'
 import wheat from '../../Assets/wheat.png'
 
@@ -25,3 +26,7 @@ const SpecificGrainInfo = ({ grain }) => {
 }
 
 export default SpecificGrainInfo
+
+SpecificGrainInfo.propTypes = {
+    grain: PropTypes.object.isRequired
+}

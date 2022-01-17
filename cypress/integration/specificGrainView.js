@@ -1,21 +1,21 @@
 describe('specific grain view for Turkey Red', () => {
     beforeEach(() => {
-        // cy.intercept('GET', 'http://localhost:3001/grains/OGrDjZPRQ0', {
-        //     "id": "OGrDjZPRQ0",
-        //     "name": "Turkey Red",
-        //     "classification": "Hard Red Winter Wheat",
-        //     "protein": 13.5,
-        //     "hasGluten": true,
-        //     "pricePerLb": 3,
-        //     "grownIn": "Colorado",
-        //     "isOrganic": true,
-        //     "flavor": "Malty and Sweet",
-        //     "texture": "Fine and slightly sandy.",
-        //     "bakingCharacteristics": "Performs well in bread, pizza dough, crackers, cookies, pie crusts, muffins, and biscuits. Truly is an all-purpose whole wheat.",
-        //     "history": "It was brought from Crimea to Kansas by Mennonite farmers in the 1870's.",
-        //     "inStock": true,
-        //     "img": "./images/turkey.jpg"
-        // })
+        cy.intercept('GET', 'http://localhost:3000/api/v1/grains/OGrDjZPRQ0', {
+            "id": "OGrDjZPRQ0",
+            "name": "Turkey Red",
+            "classification": "Hard Red Winter Wheat",
+            "protein": 13.5,
+            "hasGluten": true,
+            "pricePerLb": 3,
+            "grownIn": "Colorado",
+            "isOrganic": true,
+            "flavor": "Malty and Sweet",
+            "texture": "Fine and slightly sandy.",
+            "bakingCharacteristics": "Performs well in bread, pizza dough, crackers, cookies, pie crusts, muffins, and biscuits. Truly is an all-purpose whole wheat.",
+            "history": "It was brought from Crimea to Kansas by Mennonite farmers in the 1870's.",
+            "inStock": true,
+            "img": "./images/turkey.jpg"
+        })
 
         cy.visit('http://localhost:3001/grains/OGrDjZPRQ0')
     })

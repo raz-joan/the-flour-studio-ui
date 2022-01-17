@@ -7,7 +7,7 @@ const ReviewContainer = ({ reviews, grainName, reviewError }) => {
     
     const customerReviews = reviews.reduce((matchedReviews, review) => {
         if (grainName === review.name) {
-            matchedReviews.push(<Review key={review.id} review={review} />)
+            matchedReviews.push(<Review key={ review.id } review={ review } />)
         }
         return matchedReviews
     }, [])
@@ -15,7 +15,7 @@ const ReviewContainer = ({ reviews, grainName, reviewError }) => {
     return (
         <section className='review-container'>
             <h3 className='review-container-title'>Reviews . . .</h3>
-            {reviewError && <p className='review-error-message'>{reviewError}</p>}
+            { reviewError && <p className='review-error-message'>{ reviewError }</p>}
             { customerReviews.length ? customerReviews :
                 <div className='review-container-no-reviews'>
                     <h4 className='review-container-no-reviews-msg'>No reviews at this time for this grain.</h4>

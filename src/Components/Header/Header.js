@@ -11,12 +11,11 @@ const Header = () => {
         <header>
             <div className='title-icon-container'>
                 <h1 className='header-title'>THE FLOUR STUDIO</h1>
-                <img src={seed} alt='black and white image of a single grain seed' className='header-seed-icon'/>
+                <img src={ seed } alt='black and white image of a single grain seed' className='header-seed-icon'/>
             </div>
             <nav>
-                <button className='nav-button' onClick={() => navigate('/')}>Home</button>
-                <button className='nav-button' onClick={() => navigate('/grains')}>Grains</button>
-                {/* <button className='nav-button'>About</button> */}
+                <button className='nav-button' onClick={ () => navigate('/') }>Home</button>
+                <button className='nav-button' onClick={ () => navigate('/grains') }>Grains</button>
             </nav>
         </header>
     )

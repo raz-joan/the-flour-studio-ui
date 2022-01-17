@@ -48,7 +48,7 @@ const SpecificGrainContainer = () => {
                 if (data.id) {
                     setGrain(data)
                 } else {
-                    setFetchError('Details are unavailable ... unable to connect to the server!')
+                    setFetchError('404: Looks like what you are looking for does not exist!')
                 }
             })
     }, [])
@@ -57,9 +57,9 @@ const SpecificGrainContainer = () => {
         <>
             { fetchError ? <p className = 'fetch-error-message'>{ fetchError }</p> :
             <div className='specific-grain-container'>
-                <SpecificGrainInfo grain={grain} />
-                <ReviewForm grainName={grain.name} postNewReview={postNewReview} />
-                <ReviewContainer grainName={grain.name} reviews={reviews} reviewError={reviewError}/>
+                <SpecificGrainInfo grain={ grain } />
+                <ReviewForm grainName={ grain.name } postNewReview={ postNewReview } />
+                <ReviewContainer grainName={ grain.name } reviews={ reviews } reviewError={ reviewError }/>
             </div>
             }
         </>

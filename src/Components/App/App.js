@@ -33,6 +33,7 @@ const App = () => {
                     <Route path='/' element={ <Welcome /> }/>
                     <Route path='/grains' element={ <GrainCardsContainer grains={ grains } /> } />
                     <Route path='/grains/:id' element={ <SpecificGrainContainer /> } />
+                    <Route path='/*' element={ <p className='url-path-error-message'>404: Looks like what you are looking for does not exist!</p> }/>
                 </Routes>
                 }
             </main>

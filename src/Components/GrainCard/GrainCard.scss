@@ -8,11 +8,19 @@
     width: 245px;
 }
 
-.color-circle {
-    background-color: $brown;
+.color-circle-blue,
+.color-circle-gold {
     border-radius: 150px;
     height: 25px;
     width: 25px;
+}
+
+.color-circle-blue {
+    background-color: $blue;
+}
+
+.color-circle-gold {
+    background-color: $gold;
 }
 
 .grain-card-title {

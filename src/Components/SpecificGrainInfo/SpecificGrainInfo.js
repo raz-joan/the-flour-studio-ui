@@ -16,13 +16,13 @@ const SpecificGrainInfo = ({ grain }) => {
                 <p className='grain-info-scroll'>Scroll to leave a review and/or to read reviews.</p>
             </div>
             <article className='grain-info-card'>
-                <p className='grain-info-detail'>Classification: { grain.classification }</p>
-                <p className='grain-info-detail'>Protein: { protein }</p>
-                <p className='grain-info-detail'>Organic?: { organicStatus }, Grown in: { grain.grownIn }</p>
-                <p className='grain-info-detail'>Flavor: { grain.flavor }</p>
-                <p className='grain-info-detail'>Texture: { grain.texture }</p>
-                <p className='grain-info-detail'>Baking Characteristics: { grain.bakingCharacteristics }</p>
-                <p className='grain-info-detail'>History: { grain.history }</p>
+                <p className='grain-info-detail'>Classification: <span className='grain-info-bold'>{ grain.classification }</span></p>
+                <p className='grain-info-detail'>Protein: <span className='grain-info-bold'>{ protein }</span></p>
+                <p className='grain-info-detail'>Organic?: <span className='grain-info-bold'>{ organicStatus }</span>, Grown in: <span className='grain-info-bold'>{ grain.grownIn }</span></p>
+                <p className='grain-info-detail'>Flavor: <span className='grain-info-bold'>{ grain.flavor }</span></p>
+                <p className='grain-info-detail'>Texture: <span className='grain-info-bold'>{ grain.texture }</span></p>
+                <p className='grain-info-detail'>Baking Characteristics: <span className='grain-info-bold'>{ grain.bakingCharacteristics }</span></p>
+                <p className='grain-info-detail'>History: <span className='grain-info-bold'>{ grain.history }</span></p>
             </article>
         </section>
     )

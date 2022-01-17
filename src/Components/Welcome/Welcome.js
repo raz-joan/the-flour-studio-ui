@@ -22,7 +22,7 @@ const Welcome = () => {
             <section className='mill-description-section'>
                 <article className='description-article'>
                     <p className='mill-description'>{ millDescription }</p>
-                    <button className='view-grains-button' onClick={() => navigate('/grains')}>View our Grains!</button>
+                    <button className='view-grains-button' onClick={ () => navigate('/grains') }>View our Grains!</button>
                 </article>
                 <div className='image-container'>
                     <img className='miller-image' src={ eightyFiveMill } alt='picture of the miller loading the hopper of the stone mill with grain'/>

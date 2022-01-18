@@ -22,7 +22,7 @@ const SpecificGrainContainer = () => {
                 }
             })
             .then(() => {
-                apiCalls.getData('http://localhost:3000/api/v1/reviews')
+                apiCalls.getData('https://stormy-chamber-80110.herokuapp.com/api/v1/reviews')
                     .then(data => {
                         if (data.reviews) {
                             setReviews(data.reviews)
@@ -34,7 +34,7 @@ const SpecificGrainContainer = () => {
     }
 
     useEffect(() => {
-        apiCalls.getData(`http://localhost:3000/api/v1/grains/${id}`)
+        apiCalls.getData(`https://stormy-chamber-80110.herokuapp.com/api/v1/grains/${id}`)
             .then(data => {
                 if (data.item) {
                     setGrain(data.item)
@@ -42,8 +42,7 @@ const SpecificGrainContainer = () => {
                     setFetchError('404: Looks like what you are looking for does not exist!')
                 }
             })
-        
-        apiCalls.getData('http://localhost:3000/api/v1/reviews')
+        apiCalls.getData('https://stormy-chamber-80110.herokuapp.com/api/v1/reviews')
             .then(data => {
                 if (data.reviews) {
                     setReviews(data.reviews)

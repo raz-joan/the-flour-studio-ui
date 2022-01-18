@@ -11,9 +11,9 @@ const apiCalls = {
             })
             .catch(err => err)
     },
-
+    
     postReview: (newReview) => {
-        return fetch('http://localhost:3000/api/v1/reviews', {
+        return fetch('https://stormy-chamber-80110.herokuapp.com/api/v1/reviews', {
             method: "POST",
             body: JSON.stringify(newReview),
             headers: {

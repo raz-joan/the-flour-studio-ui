@@ -1,3 +1,6 @@
+// these tests require that the server is running on http://localhost:3000/
+// and the app to be running on http://localhost:3001/
+
 describe('welcome view / home page', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3001/')

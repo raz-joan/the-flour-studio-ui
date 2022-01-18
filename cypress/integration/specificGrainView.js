@@ -1,3 +1,6 @@
+// these tests require that the server is running on http://localhost:3000/
+// and the app to be running on http://localhost:3001/
+
 describe('specific grain view for Turkey Red', () => {
     beforeEach(() => {
         cy.intercept('GET', 'http://localhost:3000/api/v1/grains/OGrDjZPRQ0', {

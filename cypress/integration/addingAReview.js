@@ -1,3 +1,7 @@
+// these tests require that the server is running on http://localhost:3000/
+// and the app to be running on http://localhost:3001/
+// you'll need to retart the server to remove the review posted in the second test
+
 describe('user submitting a review', () => {
     beforeEach(() => {
         cy.intercept('GET', 'http://localhost:3000/api/v1/grains/OGrDjZPRQ0', {

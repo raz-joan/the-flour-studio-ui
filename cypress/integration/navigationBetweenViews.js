@@ -1,3 +1,6 @@
+// these tests require that the server is running on http://localhost:3000/
+// and the app to be running on http://localhost:3001/
+
 describe('navigation between views', () => {
     it('should be able to navigate from the home view to the grain grid view by the nav Grains button', () => {
         cy.visit('http://localhost:3001/')
@@ -54,8 +57,6 @@ describe('navigation between views', () => {
         cy.get('.grain-info-container').should('not.exist')
 
         cy.get('.grain-card').find('.grain-card-button').contains('See Grain Details').click()
-
-        cy.url().should('include', '/OGrDjZPRQ0')
 
         cy.get('.color-match-container').should('not.exist')
 

@@ -12,12 +12,12 @@ const App = () => {
 
     const [grains, setGrains] = useState([])
     const [fetchError, setFetchError] = useState('')
-
+    
     useEffect(() => {
-        apiCalls.getData('http://localhost:3000/api/v1/grains')
+        apiCalls.getData('https://stormy-chamber-80110.herokuapp.com/api/v1/grains')
             .then(data => {
-                if (data[0]) {
-                    setGrains(data)
+                if (data.grains) {
+                    setGrains(data.grains)
                 } else {
                     setFetchError('Oops ... unable to connect to the server!')
                 }

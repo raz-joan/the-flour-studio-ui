@@ -1,7 +1,9 @@
 # Mod 3: Final Solo Project: The Flour Studio  
-View the deployed app [HERE](https://raz-joan.github.io/the-flour-studio-ui)  
+View the deployed app [HERE]()  
 
 Authored by: [Joan Rasmussen](https://github.com/raz-joan)  
+
+*TL;DR ? just checkout the 'Overview' and 'Reflections'*
 
 ## Table Of Contents
 - [Overview](#overview)
@@ -13,8 +15,7 @@ Authored by: [Joan Rasmussen](https://github.com/raz-joan)
 - [Illustrations](#illustrations)
 - [Reflections](#reflections)
 - [Challenges](#challenges)
-- [Wins](#wins)
-
+- [Wins](#wins)  
 
 ## Overview  
   The goal of this solo project was to design an application that demonstrates mastery of React, Router, Async JavaScript, and end-to-end testing with Cypress. The problem that I attempted to solve was to build an app for a small flour mill to help its customers learn about unique grains for baking and to post reviews for other users to see. The audience was baking enthusiasts who are grain curious and have money to spend on niche grains. For the data, I chose to hand roll my own [backend](https://github.com/raz-joan/the-flour-studio-api) using Express.js on Node.js, which was deployed to Heroku. 
@@ -33,21 +34,9 @@ Authored by: [Joan Rasmussen](https://github.com/raz-joan)
 
 ## Setup Instructions  
 
-Option A (run both the frontend and backend locally):  
-
-1. Fork and then clone down this repo to your local machine.
-2. Clone down the server [repo](https://github.com/raz-joan/the-flour-studio-api), as well.
-3. Separately, open the root folders for each repo in your terminal and run the command `npm install` to install the dependencies on both.
-4. Checkout the branch, `git checkout feature/README`, in the-flour-studio-ui, so that the endpoints will work.
-5. In your terminal, run `npm start` for both repos to initialize the server and browser window.
-6. In your browser, enter `http://localhost:XXXX/`, where XXXX is the port number to see the project.  
-
-Option B (run the app with the Heroku hosted backend):  
-
 1. Fork and then clone down this repo to your local machine.
 2. Open the root folder of the repo in your terminal and run the command `npm install` to install the dependencies.
 3. From the `main` branch, run `npm start` to see the project in the browser.  
-
 
 ## Technologies  
   Technologies used were: JavaScript, JSX, SCSS, React, React Hooks, React Router, fetchAPI, Cypress, Wave, and Lighthouse.  
@@ -74,7 +63,7 @@ Option B (run the app with the Heroku hosted backend):
 <img width="300" alt="Review form and reviews Mobile view" src="https://user-images.githubusercontent.com/80644408/149865841-d864d237-4381-40a4-ad46-1ee14f1153aa.png">
 
 ## Reflections  
-  This project was challenging, but so fun. My planning phase was robust. The Figma board can be viewed [here](https://www.figma.com/file/RlObwpUjTsNCTsvtHbkvas/The-Flour-Studio?node-id=0%3A1) and links to user stories and other details can be found on this [google doc](https://docs.google.com/document/d/1o1xl7D6NajyHJrEg198mKYv1TFSm5UQVxF6VQ_2QqR4/edit). My project board with tickets can be viewed [here](https://github.com/raz-joan/the-flour-studio-api/projects/1). Overall, I'm proud to have built a full stack application as a frontend engineer!
+  This project was challenging, but oh so fun! My planning phase was robust. The Figma board can be viewed [here](https://www.figma.com/file/RlObwpUjTsNCTsvtHbkvas/The-Flour-Studio?node-id=0%3A1) and links to user stories and other details can be found on this [google doc](https://docs.google.com/document/d/1o1xl7D6NajyHJrEg198mKYv1TFSm5UQVxF6VQ_2QqR4/edit). My project board with tickets can be viewed [here](https://github.com/raz-joan/the-flour-studio-api/projects/1). Overall, I'm proud to have built a full stack application as a frontend engineer!
 
 ## Challenges  
   As is always the case, the most difficult part of this project was correctly implementing asynchronous functions and Router so that data flowed as it should. I also learned a lot with styling on this project, including layering pictures and using logic to have different css rules called. Correctly linking the pictures from the backend data file to the dom on the frontend was a huge challenge. Last, error handling in all capacities was a bit of a challenge.
@@ -86,3 +75,4 @@ Option B (run the app with the Heroku hosted backend):
   - Using scss instead of css and making a responsive design for desktop, tablet, and mobile.
   - Creating an accessible app. It is entirely tabbable and scored 100% on a lighthouse audit - see the unmerged branch: `feature/accessibilitiy-check`.
   - All error handling on both the backend and frontend.
+  - Cypress testing, specifically using fixtures to stub responses on intercepts.

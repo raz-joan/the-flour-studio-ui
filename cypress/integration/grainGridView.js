@@ -1,9 +1,13 @@
-// these tests require that the server is running on http://localhost:3000/
-// and the app to be running on http://localhost:3001/
-
 describe('grain grid view', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3001/grains')
+        cy.fixture('grains').then((grains) => {
+            cy.intercept('GET', 'https://stormy-chamber-80110.herokuapp.com/api/v1/grains', {
+                statusCode: 200,
+                body: grains
+            })
+        })
+
+        cy.visit('http://localhost:3000/grains')
     })
 
     it('should have a header with an h1 and a nav', () => {
@@ -28,10 +32,10 @@ describe('grain grid view', () => {
         cy.get('.gluten-state-tag').eq(1).contains('Grains WITHOUT Gluten')
     })
 
-    it('should have a section with 20 cards', () => {
+    it('should have a section with 3 cards', () => {
         cy.get('section').should('have.class', 'grain-grid-container')
 
-        cy.get('.grain-card').should('have.length', 20)
+        cy.get('.grain-card').should('have.length', 3)
     })
 
     it('should have the correct info on each card', () => {

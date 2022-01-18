@@ -1,9 +1,13 @@
-// these tests require that the server is running on http://localhost:3000/
-// and the app to be running on http://localhost:3001/
-
 describe('welcome view / home page', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3001/')
+        cy.fixture('grains').then((grains) => {
+            cy.intercept('GET', 'https://stormy-chamber-80110.herokuapp.com/api/v1/grains', {
+                statusCode: 200,
+                body: grains
+            })
+        })
+        
+        cy.visit('http://localhost:3000/')
     })
 
     it('should have a header with an h1 and a nav', () => {

@@ -17,7 +17,7 @@ Authored by: [Joan Rasmussen](https://github.com/raz-joan)
 
 
 ## Overview  
-  This goal of this solo project was to design an application that demonstrates mastery of React, Router, Async JavaScript, and end-to-end testing with Cypress. The problem that I attempted to solve was to build an app for a small flour mill to help its customers learn about unique grains for baking and to post reviews for other users to see. The audience was baking enthusiasts who are grain curious and have money to spend on niche grains. For the data, I chose to hand roll my own [backend](https://github.com/raz-joan/the-flour-studio-api) using Express.js on Node.js, which was deployed to Heroku. 
+  The goal of this solo project was to design an application that demonstrates mastery of React, Router, Async JavaScript, and end-to-end testing with Cypress. The problem that I attempted to solve was to build an app for a small flour mill to help its customers learn about unique grains for baking and to post reviews for other users to see. The audience was baking enthusiasts who are grain curious and have money to spend on niche grains. For the data, I chose to hand roll my own [backend](https://github.com/raz-joan/the-flour-studio-api) using Express.js on Node.js, which was deployed to Heroku. 
 
 ## Project Goals  
   The learning goals of this project were to:  
@@ -53,7 +53,7 @@ Option B (run the app with the Heroku hosted backend):
   Technologies used were: JavaScript, JSX, SCSS, React, React Hooks, React Router, fetchAPI, Cypress, Wave, and Lighthouse.  
 
 ## Code Architecture  
-  This application was built using `create-react-app`, such that all business and view code is located in the src folder. It is organized by Assets, Components, SassStyles, apiCalls.js, and index.js. Cypress files are contained in Cypress/Integration/*.js. ES6 syntax was used throughout. The icon was sourced on [flaticon.com](https://www.flaticon.com/). Attribution is noted in the footer of the site.
+  This application was built using `create-react-app`, such that all business and view code is located in the src folder. It is organized by Assets, Components, SassStyles, apiCalls.js, and index.js. Cypress test files are contained in cypress/integration/*.js. ES6 syntax was used throughout. The icon was sourced on [flaticon.com](https://www.flaticon.com/). Attribution is noted in the footer of the site.
 
 ## Illustrations  
 

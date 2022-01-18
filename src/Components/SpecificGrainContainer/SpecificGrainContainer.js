@@ -24,8 +24,8 @@ const SpecificGrainContainer = () => {
             .then(() => {
                 apiCalls.getData('http://localhost:3000/api/v1/reviews')
                     .then(data => {
-                        if (data[0]) {
-                            setReviews(data)
+                        if (data.reviews) {
+                            setReviews(data.reviews)
                         } else {
                             setReviewError('Reviews are unavailable ... unable to connect to the server!')
                         }
@@ -36,8 +36,8 @@ const SpecificGrainContainer = () => {
     useEffect(() => {
         apiCalls.getData(`http://localhost:3000/api/v1/grains/${id}`)
             .then(data => {
-                if (data.id) {
-                    setGrain(data)
+                if (data.item) {
+                    setGrain(data.item)
                 } else {
                     setFetchError('404: Looks like what you are looking for does not exist!')
                 }
@@ -45,8 +45,8 @@ const SpecificGrainContainer = () => {
         
         apiCalls.getData('http://localhost:3000/api/v1/reviews')
             .then(data => {
-                if (data[0]) {
-                    setReviews(data)
+                if (data.reviews) {
+                    setReviews(data.reviews)
                 } else {
                     setReviewError('Reviews are unavailable ... unable to connect to the server!')
                 }

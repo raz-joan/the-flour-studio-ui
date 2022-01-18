@@ -16,8 +16,8 @@ const App = () => {
     useEffect(() => {
         apiCalls.getData('http://localhost:3000/api/v1/grains')
             .then(data => {
-                if (data[0]) {
-                    setGrains(data)
+                if (data.grains) {
+                    setGrains(data.grains)
                 } else {
                     setFetchError('Oops ... unable to connect to the server!')
                 }

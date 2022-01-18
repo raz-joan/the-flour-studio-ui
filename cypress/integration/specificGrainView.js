@@ -1,26 +1,27 @@
-// these tests require that the server is running on http://localhost:3000/
-// and the app to be running on http://localhost:3001/
-
 describe('specific grain view for Turkey Red', () => {
     beforeEach(() => {
-        cy.intercept('GET', 'http://localhost:3000/api/v1/grains/OGrDjZPRQ0', {
-            "id": "OGrDjZPRQ0",
-            "name": "Turkey Red",
-            "classification": "Hard Red Winter Wheat",
-            "protein": 13.5,
-            "hasGluten": true,
-            "pricePerLb": 3,
-            "grownIn": "Colorado",
-            "isOrganic": true,
-            "flavor": "Malty and Sweet",
-            "texture": "Fine and slightly sandy.",
-            "bakingCharacteristics": "Performs well in bread, pizza dough, crackers, cookies, pie crusts, muffins, and biscuits. Truly is an all-purpose whole wheat.",
-            "history": "It was brought from Crimea to Kansas by Mennonite farmers in the 1870's.",
-            "inStock": true,
-            "img": "./images/turkey.jpg"
+        cy.fixture('grains').then((grains) => {
+            cy.intercept('GET', 'https://stormy-chamber-80110.herokuapp.com/api/v1/grains', {
+                statusCode: 200,
+                body: grains
+            })
         })
 
-        cy.visit('http://localhost:3001/grains/OGrDjZPRQ0')
+        cy.fixture('reviews').then((reviews) => {
+            cy.intercept('GET', 'https://stormy-chamber-80110.herokuapp.com/api/v1/reviews', {
+                statusCode: 200,
+                body: reviews
+            })
+        })
+
+        cy.fixture('singleGrain').then((singleGrain) => {
+            cy.intercept('GET', 'https://stormy-chamber-80110.herokuapp.com/api/v1/grains/MPHj4b_adK', {
+                statusCode: 200,
+                body: singleGrain
+            })
+        })
+
+        cy.visit('http://localhost:3000/grains/MPHj4b_adK')
     })
 
     it('should have a header with an h1 and a nav', () => {
@@ -92,6 +93,10 @@ describe('specific grain view for Turkey Red', () => {
 
         cy.get('.review-container h3').contains('Reviews . . .')
 
-        cy.get('.review-container-no-reviews h4').contains('No reviews at this time for this grain.')
+        cy.get('.review-container-no-reviews').should('not.exist')
+
+        cy.get('.customer-review-title').contains('Happy Baker gave Turkey Red a rating of 5 on 2021/12/20')
+
+        cy.get('.customer-review p').contains('Love the full flavor and texture of this whole wheat flour. It\'s performed great in sourdough bread and in chocolate chip cookies!')
     })
 })

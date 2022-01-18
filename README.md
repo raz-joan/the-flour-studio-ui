@@ -1,5 +1,5 @@
 # Mod 3: Final Solo Project: The Flour Studio  
-View the deployed app [HERE]()  
+View the deployed app [HERE](https://the-flour-studio.herokuapp.com/)  
 
 Authored by: [Joan Rasmussen](https://github.com/raz-joan)  
 

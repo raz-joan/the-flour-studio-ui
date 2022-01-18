@@ -1,0 +1,10 @@
+@import '_variables.scss';
+@import '_normalize.scss';
+
+body {
+    background-color: $off-white;
+    color: $black;
+    font-family: $body-font;
+    height: 100vh;
+    width: 100%;
+}

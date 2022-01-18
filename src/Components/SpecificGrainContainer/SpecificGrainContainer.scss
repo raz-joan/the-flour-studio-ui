@@ -1,0 +1,15 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+.fetch-error-message {
+    @include flex(center, center);
+    font-family: $header-font;
+    font-size: 30px;
+    height: 80vh;
+    width: 100%;
+}
+
+.specific-grain-container {
+    @include flex(space-around, center, column);
+    width: 100%;
+}

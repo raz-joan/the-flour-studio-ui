@@ -1,0 +1,18 @@
+{
+    "item": {
+        "id": "MPHj4b_adK",
+        "name": "Turkey Red",
+        "classification": "Hard Red Winter Wheat",
+        "protein": 13.5,
+        "hasGluten": true,
+        "pricePerLb": 3,
+        "grownIn": "Colorado",
+        "isOrganic": true,
+        "flavor": "Malty and Sweet",
+        "texture": "Fine and slightly sandy.",
+        "bakingCharacteristics": "Performs well in bread, pizza dough, crackers, cookies, pie crusts, muffins, and biscuits. Truly is an all-purpose whole wheat.",
+        "history": "It was brought from Crimea to Kansas by Mennonite farmers in the 1870's.",
+        "inStock": true,
+        "img": "https://user-images.githubusercontent.com/80644408/149954650-1c566af8-ae56-47b7-a0ed-ee33f0e2311e.jpg"
+    }
+}

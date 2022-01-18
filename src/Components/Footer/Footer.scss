@@ -1,0 +1,13 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+footer {
+    @include flex(center, center);
+    margin: 1% 0;
+}
+
+.icon-ref {
+    font-family: $body-font;
+    font-size: 10px;
+    color: $black;
+}

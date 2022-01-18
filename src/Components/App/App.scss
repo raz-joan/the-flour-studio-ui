@@ -1,0 +1,11 @@
+@import '../../SassStyles/_variables';
+@import '../../SassStyles/_mixins';
+
+.fetch-error-message,
+.url-path-error-message {
+    @include flex(center, center);
+    font-family: $header-font;
+    font-size: 30px;
+    height: 80vh;
+    width: 100%;
+}

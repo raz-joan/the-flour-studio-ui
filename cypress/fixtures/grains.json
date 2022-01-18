@@ -1,0 +1,52 @@
+{
+  "grains": [
+    {
+      "id": "MPHj4b_adK",
+      "name": "Turkey Red",
+      "classification": "Hard Red Winter Wheat",
+      "protein": 13.5,
+      "hasGluten": true,
+      "pricePerLb": 3,
+      "grownIn": "Colorado",
+      "isOrganic": true,
+      "flavor": "Malty and Sweet",
+      "texture": "Fine and slightly sandy.",
+      "bakingCharacteristics": "Performs well in bread, pizza dough, crackers, cookies, pie crusts, muffins, and biscuits. Truly is an all-purpose whole wheat.",
+      "history": "It was brought from Crimea to Kansas by Mennonite farmers in the 1870's.",
+      "inStock": true,
+      "img": "https://user-images.githubusercontent.com/80644408/149954650-1c566af8-ae56-47b7-a0ed-ee33f0e2311e.jpg"
+    },
+    {
+      "id": "TUSyWYlg6L",
+      "name": "Red Fife",
+      "classification": "Hard Red Winter Wheat",
+      "protein": 14,
+      "hasGluten": true,
+      "pricePerLb": 3,
+      "grownIn": "South+Dakota",
+      "isOrganic": true,
+      "flavor": "Toasty, Sweet, and Nutty",
+      "texture": "Fine and slightly sandy.",
+      "bakingCharacteristics": "Performs well in bread, pizza dough, crackers, cookies, pie crusts, muffins, and biscuits. Truly is an all-purpose whole wheat.",
+      "history": "It first came to the U.S. from Canada in the mid 1800’s.",
+      "inStock": true,
+      "img": "https://user-images.githubusercontent.com/80644408/149954763-462b7aee-ffa2-43b8-b8b3-da68dab5d736.jpg"
+    },
+    {
+      "id": "jKd5Pu7ixa",
+      "name": "Rouge De Bordeaux",
+      "classification": "Hard Red Spring Wheat",
+      "protein": 14,
+      "hasGluten": true,
+      "pricePerLb": 3,
+      "grownIn": "North+Dakota",
+      "isOrganic": false,
+      "flavor": "Rich nutty and sweet flavor with notes of cinnamon",
+      "texture": "Fine and slightly sandy.",
+      "bakingCharacteristics": "Performs well in bread, pizza dough, bagels, crackers, muffins, and biscuits.",
+      "history": "It was originally brought to France by the Romans sometime before Christ and then became a staple flour in the 1900’s.",
+      "inStock": false,
+      "img": "https://user-images.githubusercontent.com/80644408/149954777-5bf0c068-f23e-48fa-9c18-98e89aabad21.jpg"
+    }
+  ]
+}
